@@ -11,6 +11,12 @@ public class PlayerController : MonoBehaviour
     public bool hasPowerup = false;
     public GameObject powerupIndicator;
 
+    public PowerUpType currentPowerUp = PowerUpType.None;
+
+    public GameObject rocketPrefab;
+    private GameObject tmpRocket;
+    private Coroutine powerupCountdown;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
